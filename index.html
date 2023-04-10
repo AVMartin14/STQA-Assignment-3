@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background-color: #f5e1c5;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+
+        h4 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px #888888;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+          
+        input[type="number"] {
+            width: 98%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-right: auto;
+            margin-left: auto;
+            width: 20%;
+            font-size: 20px;
+        }
+          
+        p {
+            font-size: 30px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: blue;
+        }        
+    </style>
+  </head>
+  <body>
+    <h1>BMI Calculator</h1>
+    <h4>Enter your height in feet and inches: </h4>
+    <form>
+        <!-- Prompts the user to enter the height input. -->
+        <label for="heightF_input">Height (ft):</label>
+        <input type="number" id="heightF_input" name="heightF_input" required />
+        <br><br>
+        <label for="heightI_input">Height (in):</label>
+        <input type="number" id="heightI_input" name="heightI_input" required />
+        <br><br>
+        <!-- Prompts the user to enter the weight input. -->
+        <label for="weight_input">Weight (lbs):</label>
+        <input type="number" id="weight_input" name="weight_input" required />
+        <br><br>
+        <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script src="bmi.js"></script>
+  </body>
+</html>
