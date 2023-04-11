@@ -12,6 +12,6 @@ jobs:
       - run:
           name: Run tests
           command: npm test
-       - run:
+      - run:
           name: Send coverage data to Coveralls
           command: npm coveralls < coverage/lcov.info
